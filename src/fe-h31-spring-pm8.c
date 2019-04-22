@@ -7,14 +7,14 @@
 #define FREE_IF_NOT_NULL(p) ((p) ? (free((p)), (p) = NULL) : NULL)
 
 /* The following two functions are for showing internal statuses. */
-void print_int_array(int a[], int n) {
+void print_int_array(const int a[], int n) {
   int i;
   for (i = 0; i < n; ++i) {
     printf("%4d ", a[i]);
   }
 }
 
-void print_everything(int parent[], int left[], int right[], int freq[], int n) {
+void print_everything(const int parent[], const int left[], const int right[], const int freq[], int n) {
   printf("parent: "); print_int_array(parent, n); printf("\n");
   printf("left:   "); print_int_array(left, n);   printf("\n");
   printf("right:  "); print_int_array(right, n);  printf("\n");
