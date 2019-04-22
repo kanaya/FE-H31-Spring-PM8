@@ -31,7 +31,7 @@ void Huffman(int *size, int parent[], int left[], int right[], int freq[]) {
 }
 
 void SortNode(int size, const int parent[], const int freq[], int *nsize, int node[]) {
-  void Sort(const int [], int, int *);
+  void Sort(const int [], int, int []);
   int i;
 
   *nsize = 0;
