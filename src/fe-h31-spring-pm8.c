@@ -6,23 +6,8 @@
 /* The following macro is not appeared in the question. */
 #define FREE_IF_NOT_NULL(p) ((p) ? (free((p)), (p) = NULL) : NULL)
 
-/* The following two functions are for showing internal statuses. */
-void print_int_array(const int a[], int n) {
-  int i;
-  for (i = 0; i < n; ++i) {
-    printf("%4d ", a[i]);
-  }
-}
-
-void print_everything(const int parent[], const int left[], const int right[], const int freq[], int n) {
-  printf("parent: "); print_int_array(parent, n); printf("\n");
-  printf("left:   "); print_int_array(left, n);   printf("\n");
-  printf("right:  "); print_int_array(right, n);  printf("\n");
-  printf("freq:   "); print_int_array(freq, n);   printf("\n");
-  printf("---\n");
-}
-
 void Huffman(int *size, int parent[], int left[], int right[], int freq[]) {
+  void print_everything(const int [], const int [], const int [], const int [], int);
   void SortNode(int, const int [], const int [], int *, int []);
   int i, j, nsize;
   int *node;
@@ -102,6 +87,21 @@ void init_freq(const char s[], int len, int n, int freq[]) {
       freq[j] += 1;
     }
   }
+}
+
+void print_int_array(const int a[], int n) {
+  int i;
+  for (i = 0; i < n; ++i) {
+    printf("%4d ", a[i]);
+  }
+}
+
+void print_everything(const int parent[], const int left[], const int right[], const int freq[], int n) {
+  printf("parent: "); print_int_array(parent, n); printf("\n");
+  printf("left:   "); print_int_array(left, n);   printf("\n");
+  printf("right:  "); print_int_array(right, n);  printf("\n");
+  printf("freq:   "); print_int_array(freq, n);   printf("\n");
+  printf("---\n");
 }
 
 /* We assume that we only use A, B, C, and D. */
