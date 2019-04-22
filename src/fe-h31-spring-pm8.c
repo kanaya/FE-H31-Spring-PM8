@@ -79,9 +79,12 @@ int idx(int c) {
   return c - 'A';
 }
 
-void init_freq(const char s[], int len, int n, int freq[]) {
+void init_freq(const char s[], int l, int n, int freq[]) {
   int i;
-  for (i = 0; i < len; ++i) {
+  for (i = 0; i < l; ++i) {
+    freq[i] = 0;
+  }
+  for (i = 0; i < l; ++i) {
     int j = idx(s[i]);
     if (j < n) {
       freq[j] += 1;
@@ -119,9 +122,6 @@ int main(void) {
   assert(freq = (int *)malloc(sizeof(int) * N2));
   for (i = 0; i < N2; ++i) {
     parent[i] = left[i] = right[i] = freq[i] = -1;
-  }
-  for (i = 0; i < N; ++i) {
-    freq[i] = 0;
   }
   init_freq(s, strlen(s), N, freq);
   size = N;
