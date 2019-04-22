@@ -12,7 +12,7 @@ void Huffman(int *size, int parent[], int left[], int right[], int freq[]) {
   int i, j, nsize;
   int *node;
 
-  assert(node = (int *)malloc(sizeof(int) * *size));
+  assert(node = (int *)malloc(sizeof(int) * *size * *size));
   SortNode(*size, parent, freq, &nsize, node);
   print_everything(parent, left, right, freq, *size);
   while (/* c */ nsize >= 2) {
