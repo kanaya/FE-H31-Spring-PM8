@@ -23,7 +23,7 @@ void print_everything(int parent[], int left[], int right[], int freq[], int n) 
 }
 
 void Huffman(int *size, int parent[], int left[], int right[], int freq[]) {
-  void SortNode(int, int [], int [], int *, int []);
+  void SortNode(int, const int [], const int [], int *, int []);
   int i, j, nsize;
   int *node;
 
@@ -45,8 +45,8 @@ void Huffman(int *size, int parent[], int left[], int right[], int freq[]) {
   FREE_IF_NOT_NULL(node);
 }
 
-void SortNode(int size, int parent[], int freq[], int *nsize, int node[]) {
-  void Sort(int [], int, int *);
+void SortNode(int size, const int parent[], const int freq[], int *nsize, int node[]) {
+  void Sort(const int [], int, int *);
   int i;
 
   *nsize = 0;
@@ -74,7 +74,7 @@ int cmpr_freq_and_node(const void *a, const void *b) {
   return (x < y) ? -1 : ((x == y) ? 0 : 1);
 }
 
-void Sort(int freq[], int nsize, int node[]) {
+void Sort(const int freq[], int nsize, int node[]) {
   FREQ_AND_NODE_T *freq_and_node;
   int i;
 
