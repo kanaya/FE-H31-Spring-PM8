@@ -81,6 +81,7 @@ int idx(int c) {
 
 void init_freq(const char s[], int l, int n, int freq[]) {
   int i;
+  
   for (i = 0; i < l; ++i) {
     freq[i] = 0;
   }
@@ -94,6 +95,7 @@ void init_freq(const char s[], int l, int n, int freq[]) {
 
 void print_int_array(const int a[], int n) {
   int i;
+
   for (i = 0; i < n; ++i) {
     printf("%4d ", a[i]);
   }
