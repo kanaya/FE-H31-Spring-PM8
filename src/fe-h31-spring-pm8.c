@@ -118,7 +118,9 @@ int main(void) {
   assert(right = (int *)malloc(sizeof(int) * N2));
   assert(freq = (int *)malloc(sizeof(int) * N2));
   for (i = 0; i < N2; ++i) {
-    parent[i] = left[i] = right[i] = -1;
+    parent[i] = left[i] = right[i] = freq[i] = -1;
+  }
+  for (i = 0; i < N; ++i) {
     freq[i] = 0;
   }
   init_freq(s, strlen(s), N, freq);
