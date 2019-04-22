@@ -6,6 +6,7 @@
 /* The following macro is not appeared in the question. */
 #define FREE_IF_NOT_NULL(p) ((p) ? (free((p)), (p) = NULL) : NULL)
 
+/* The following two functions are for showing internal statuses. */
 void print_int_array(int a[], int n) {
   int i;
   for (i = 0; i < n; ++i) {
@@ -103,6 +104,7 @@ void init_freq(char s[], int len, int n, int freq[]) {
   }
 }
 
+/* We assume that we only use A, B, C, and D. */
 #define N  4
 #define N2 (N * N)
 
