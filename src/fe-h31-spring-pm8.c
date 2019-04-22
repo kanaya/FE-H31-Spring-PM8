@@ -109,7 +109,7 @@ void init_freq(char s[], int len, int n, int freq[]) {
 #define N2 (N * N)
 
 int main(void) {
-  char s[] = "AAAABBCDCDDACCAAAAA";
+  const char s[] = "AAAABBCDCDDACCAAAAA";
   int *parent, *left, *right, *freq;
   int size, i;
 
