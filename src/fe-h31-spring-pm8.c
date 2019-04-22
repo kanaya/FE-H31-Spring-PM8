@@ -94,7 +94,7 @@ int idx(int c) {
   return c - 'A';
 }
 
-void init_freq(char s[], int len, int n, int freq[]) {
+void init_freq(const char s[], int len, int n, int freq[]) {
   int i;
   for (i = 0; i < len; ++i) {
     int j = idx(s[i]);
